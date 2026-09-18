@@ -2,6 +2,15 @@
 
 Calculadora desenvolvida com HTML, CSS e JavaScript, com tema escuro e painel para cálculo de juros compostos.
 
+![GitHub Pages](https://img.shields.io/badge/Demo-online-success)
+![HTML](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+
+## 🚀 Demo ao vivo
+
+👉 **[Testar a calculadora](https://walterferreiradev.github.io/calculadora-juros-compostos/)**
+
 ## ✨ Funcionalidades
 
 - Operações básicas: soma, subtração, multiplicação e divisão
@@ -18,6 +27,8 @@ Calculadora desenvolvida com HTML, CSS e JavaScript, com tema escuro e painel pa
 - CSS3
 - JavaScript (vanilla)
 
-## 📄 Licença
+## 📁 Como rodar localmente
 
-MIT
+1. Clona o repositório:
+   ```bash
+   git clone https://github.com/walterferreiradev/calculadora-juros-compostos.git
