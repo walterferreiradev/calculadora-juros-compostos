@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <script src="script.js" defer></script>
+  <title>Calculadora</title>
+    <style>
+    body { background: rgb(55, 99, 141) !important; }
+    .calculator { border: 10px solid rgb(104, 139, 104) !important; }
+    </style>
+
+</head>
+<body>
+  <main class="main">
+    <div class="calculator">
+      <!-- Tabs -->
+      <div class="tabs">
+        <button class="tab active" id="tabBasic" onclick="this.blur();">Padrão</button>
+        <button class="tab" id="tabJuros" onclick="this.blur();">Juros Compostos</button>
+      </div>
+
+      <!-- Calculadora padrão -->
+      <div id="basicCalc">
+        <div class="screen">
+          <div class="screen-last" id="lastOperationScreen"></div>
+          <div class="screen-current" id="currentOperationScreen">0</div>
+        </div>
+        <div class="buttons-grid">
+          <button class="btn btn-red span-2" id="clearBtn" onclick="this.blur();">CLEAR</button>
+          <button class="btn btn-blue span-2" id="deleteBtn" onclick="this.blur();">DELETE</button>
+
+          <button class="btn" onclick="this.blur();" data-number>7</button>
+          <button class="btn" onclick="this.blur();" data-number>8</button>
+          <button class="btn" onclick="this.blur();" data-number>9</button>
+          <button class="btn" onclick="this.blur();" data-operator>÷</button>
+
+          <button class="btn" onclick="this.blur();" data-number>4</button>
+          <button class="btn" onclick="this.blur();" data-number>5</button>
+          <button class="btn" onclick="this.blur();" data-number>6</button>
+          <button class="btn" onclick="this.blur();" data-operator>×</button>
+
+          <button class="btn" onclick="this.blur();" data-number>1</button>
+          <button class="btn" onclick="this.blur();" data-number>2</button>
+          <button class="btn" onclick="this.blur();" data-number>3</button>
+          <button class="btn" onclick="this.blur();" data-operator>−</button>
+
+          <button class="btn" onclick="this.blur();" id="pointBtn">.</button>
+          <button class="btn" onclick="this.blur();" data-number>0</button>
+          <button class="btn" onclick="this.blur();" id="equalsBtn">=</button>
+          <button class="btn" onclick="this.blur();" data-operator>+</button>
+        </div>
+      </div>
+
+      <!-- Painel de Juros Compostos -->
+      <div class="juros-panel" id="jurosPanel">
+        <h3>💰 Juros Compostos</h3>
+
+        <label for="capital">Capital inicial (R$)</label>
+        <input type="number" id="capital" placeholder="1000" value="1000" />
+
+        <label for="taxa">Taxa de juros (% ao mês)</label>
+        <input type="number" id="taxa" placeholder="1" value="1" step="0.01" />
+
+        <label for="periodo">Período (meses)</label>
+        <input type="number" id="periodo" placeholder="12" value="12" />
+
+        <label for="aporte">Aporte mensal (R$) — opcional</label>
+        <input type="number" id="aporte" placeholder="0" value="0" />
+
+        <div class="juros-buttons">
+            <button class="btn btn-juros" id="calcularJuros" onclick="this.blur();">Calcular</button>
+            <button class="btn btn-limpar" id="limparJuros" onclick="this.blur();">Limpar</button>
+</div>
+
+        <div class="juros-result" id="jurosResult" style="display:none;"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="ano"></span> walterferreiradev</p>
+    <a href="https://github.com/walterferreiradev" target="_blank" rel="noopener">
+      <img class="github-logo" src="GIT.png" alt="GitHub" />
+    </a>
+  </footer>
+
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
